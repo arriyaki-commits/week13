@@ -6,7 +6,7 @@
 
 @section('content')
     <h2 class="text-center py-2">แก้ไขบทความ</h2>
-    <form method="POST" action="{{ route('/author/update', $blogs->id) }}">
+    <form method="POST" action="{{ route('update', $blogs->id) }}">
         @csrf
         <div class="form-group">
             <label for="title">ชื่อบทความ: </label>
@@ -26,6 +26,6 @@
         @enderror
 
         <input type="submit" value="บันทึก" class="btn btn-primary my-3">
-        <a href="{{ route('/author/blogs') }}" class="btn btn-secondary my-3">บทความทั้งหมด</a>
+        <a href="/author/blogs" class="btn btn-success my-3">บทความทั้งหมด</a>
     </form>
 @endsection

@@ -28,6 +28,7 @@ Route::get('/abouts', [AdminController::class, 'abouts'])->name("abouts");
 Route::get('/blogs', [AdminController::class, 'blogs'])->name("blogs");
 Route::get('/create', [AdminController::class, 'create'])->name("create");
 Route::post('/insert', [AdminController::class, 'insert'])->name("insert");
+Route::post('/edit/{id}', [AdminController::class, 'edit'])->name("edit");
 
 
 Route::get('/test-db', function () {
